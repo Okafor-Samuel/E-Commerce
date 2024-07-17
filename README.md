@@ -1,6 +1,4 @@
-Sure! Here is the content reformatted as a README file:
 
-``markdown
 # Microservice E-commerce Platform
 
 ## Overview
