@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: customer
+      username: root
+      password: Okafor1000.com
+      authentication-database: admin
+
+server:
+  port: 8090
