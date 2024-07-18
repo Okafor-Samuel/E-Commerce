@@ -1,0 +1,88 @@
+version: '3.8'
+
+
+services:
+  postgres:
+    container_name: ms_pg_sql
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: OkaforSamuel
+      POSTGRES_PASSWORD: Okafor1000.com
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+    networks:
+      - microservice-net
+    restart: unless-stopped
+
+
+  pgadmin:
+    container_name: ms_pgadmin
+    image: dpage/pgadmin4:latest
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    networks:
+      - microservice-net
+    restart: unless-stopped
+
+
+  mongodb:
+    container_name: ms_mongo_db
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo:/data
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: Okafor1000.com
+    networks:
+      - microservice-net
+
+
+  mongo-express:
+    container_name: ms_mongo_express
+    image: mongo-express:latest
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: Okafor1000.com
+      ME_CONFIG_BASICAUTH_USERNAME: admin
+      ME_CONFIG_BASICAUTH_PASSWORD: pass
+      ME_CONFIG_MONGODB_SERVER: ms_mongo_db
+    networks:
+      - microservice-net
+
+
+  mail-dev:
+    container_name: ms_mail_dev
+    image: maildev/maildev:latest
+    ports:
+      - "1080:1080"
+      - "1025:1025"
+    networks:
+      - microservice-net
+
+
+networks:
+  microservice-net:
+    driver: bridge
+
+
+volumes:
+  postgres:
+  pgadmin:
+  mongo:
+
+
+
