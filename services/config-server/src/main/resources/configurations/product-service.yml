@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/product
+    url: jdbc:postgresql://localhost:5433/product
     username: postgres
     password: Okafor.com
     driver-class-name: org.postgresql.Driver
