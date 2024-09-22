@@ -1,7 +1,7 @@
-package com.samuel.ecommerce.payment.payment;
+package com.samuel.ecommerce.payment;
 
-import com.samuel.ecommerce.payment.notification.NotificationProducer;
-import com.samuel.ecommerce.payment.notification.PaymentNotificationRequest;
+import com.samuel.ecommerce.notification.NotificationProducer;
+import com.samuel.ecommerce.notification.PaymentNotificationRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
