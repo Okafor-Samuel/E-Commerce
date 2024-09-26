@@ -1,4 +1,4 @@
-package com.samuel.ecommerce.payment.payment;
+package com.samuel.ecommerce.payment;
 
 import java.math.BigDecimal;
 
