@@ -1,4 +1,4 @@
-package com.samuel.ecommerce.payment;
+package com.samuel.ecommerce;
 
 import com.samuel.ecommerce.customer.CustomerResponse;
 import com.samuel.ecommerce.order.PaymentMethod;
