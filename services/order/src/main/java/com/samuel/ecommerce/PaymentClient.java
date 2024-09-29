@@ -1,4 +1,4 @@
-package com.samuel.ecommerce.payment;
+package com.samuel.ecommerce;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
