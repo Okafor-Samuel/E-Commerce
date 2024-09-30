@@ -1,4 +1,4 @@
-package com.samuel.ecommerce.payment.payment;
+package com.samuel.ecommerce.kafka.payment;
 
 public enum PaymentMethod {
     PAYPAL,
