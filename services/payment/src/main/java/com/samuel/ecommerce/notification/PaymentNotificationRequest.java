@@ -1,6 +1,6 @@
-package com.samuel.ecommerce.payment.notification;
+package com.samuel.ecommerce.notification;
 
-import com.samuel.ecommerce.payment.payment.PaymentMethod;
+import com.samuel.ecommerce.payment.PaymentMethod;
 
 import java.math.BigDecimal;
 
