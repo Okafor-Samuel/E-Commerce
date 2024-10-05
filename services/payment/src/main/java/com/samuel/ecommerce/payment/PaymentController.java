@@ -1,4 +1,4 @@
-package com.samuel.ecommerce.payment.payment;
+package com.samuel.ecommerce.payment;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
