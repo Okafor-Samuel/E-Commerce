@@ -1,4 +1,4 @@
-package com.samuel.ecommerce.payment.payment;
+package com.samuel.ecommerce.payment;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -18,13 +18,18 @@ import java.time.LocalDateTime;
 @EntityListeners(AuditingEntityListener.class)
 @Table(name = "payment")
 public class Payment {
+
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private BigDecimal amount;
+
     @Enumerated(EnumType.STRING)
     private PaymentMethod paymentMethod;
+
     private Integer orderId;
+
     @CreatedDate
     @Column(updatable = false, nullable = false)
     private LocalDateTime createdAt;
