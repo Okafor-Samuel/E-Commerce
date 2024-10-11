@@ -1,3 +1,5 @@
+server:
+  port: 8070
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5433/order
@@ -7,7 +9,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
@@ -24,6 +26,3 @@ spring:
       customer-url: http://localhost:8222/api/v1/customer
       product-url: http://localhost:8222/api/v1/product
       payment-url: http://localhost:8222/api/v1/payment
-
-  server:
-    port: 8070
