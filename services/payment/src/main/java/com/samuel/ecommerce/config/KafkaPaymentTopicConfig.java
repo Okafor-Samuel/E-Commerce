@@ -1,4 +1,4 @@
-package com.samuel.ecommerce.payment.config;
+package com.samuel.ecommerce.config;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.context.annotation.Bean;
